@@ -175,6 +175,8 @@ void setupPulsesPXX(unsigned int port)
 {
   uint16_t chan=0, chan_low=0;
 
+  // TRACE(".");
+
   modulePulsesData[port].pxx.ptr = modulePulsesData[port].pxx.pulses;
   modulePulsesData[port].pxx.pcmValue = 0 ;
   modulePulsesData[port].pxx.pcmCrc = 0;

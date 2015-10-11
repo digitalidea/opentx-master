@@ -1,6 +1,6 @@
 #include "../opentx.h"
 
-TelemetryItem telemetryItems[MAX_SENSORS];
+TelemetryItem telemetryItems[MAX_SENSORS+10];
 uint8_t allowNewSensors;
 
 void TelemetryItem::gpsReceived()

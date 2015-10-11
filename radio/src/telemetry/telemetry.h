@@ -164,7 +164,7 @@ class TelemetryItem
     void gpsReceived();
 };
 
-extern TelemetryItem telemetryItems[MAX_SENSORS];
+extern TelemetryItem telemetryItems[MAX_SENSORS+10];
 extern uint8_t allowNewSensors;
 
 inline bool isTelemetryFieldAvailable(int index)

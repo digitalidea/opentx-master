@@ -343,6 +343,7 @@ extern "C" void TIM1_CC_IRQHandler()
   setupPulses(INTERNAL_MODULE);
 
   if (s_current_protocol[INTERNAL_MODULE] == PROTO_PXX) {
+    TRACE("x");
     DMA2->HIFCR = DMA_HIFCR_CTCIF6 | DMA_HIFCR_CHTIF6 | DMA_HIFCR_CTEIF6 | DMA_HIFCR_CDMEIF6 | DMA_HIFCR_CFEIF6;
     DMA2_Stream6->M0AR = CONVERT_PTR_UINT(&modulePulsesData[INTERNAL_MODULE].pxx.pulses[1]);
     DMA2_Stream6->CR |= DMA_SxCR_EN;   // enable DMA
